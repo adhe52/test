@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="89"/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     data.`id` AS data_id,
+     data.`nama` AS data_nama,
+     data.`ktp` AS data_ktp,
+     data.`hp` AS data_hp,
+     data.`alamat` AS data_alamat,
+     data.`type` AS data_type,
+     data.`merk` AS data_merk,
+     data.`cicilanbulan` AS data_cicilanbulan,
+     data.`dp` AS data_dp,
+     data.`totalharga` AS data_totalharga,
+     data.`cicilanprice` AS data_cicilanprice,
+     data.`tanggal` AS data_tanggal,
+     data.`tobay` AS data_tobay
+FROM
+     `data` data
+ where id =$P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="ktp" class="java.lang.String"/>
+	<field name="hp" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<field name="merk" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="cicilanbulan" class="java.lang.String"/>
+	<field name="dp" class="java.lang.String"/>
+	<field name="totalharga" class="java.lang.String"/>
+	<field name="cicilanprice" class="java.lang.String"/>
+	<field name="tanggal" class="java.lang.String"/>
+	<field name="tobay" class="java.lang.String"/>
+	<field name="data_id" class="java.lang.String"/>
+	<field name="data_nama" class="java.lang.String"/>
+	<field name="data_ktp" class="java.lang.String"/>
+	<field name="data_hp" class="java.lang.String"/>
+	<field name="data_alamat" class="java.lang.String"/>
+	<field name="data_type" class="java.lang.String"/>
+	<field name="data_merk" class="java.lang.String"/>
+	<field name="data_cicilanbulan" class="java.lang.String"/>
+	<field name="data_dp" class="java.lang.String"/>
+	<field name="data_totalharga" class="java.lang.String"/>
+	<field name="data_cicilanprice" class="java.lang.String"/>
+	<field name="data_tanggal" class="java.lang.String"/>
+	<field name="data_tobay" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="133" splitType="Stretch">
+			<image>
+				<reportElement x="19" y="0" width="149" height="108"/>
+				<imageExpression><![CDATA["C:\\Users\\ade herawan\\Desktop\\PBO\\uas_2\\src\\gambar\\Citycons_car_icon-icons.com_67916.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="118" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="168" y="69" width="280" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kramat No. 98, Senen Jakarta Pusat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="49" width="117" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELOMPOK 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="11" width="276" height="38"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SHOW ROOM MOBIL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="226" y="13" width="142" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[KONTRAK JUAL BELI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="11" width="54" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="11" width="53" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[KJB/SMK/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="126" y="11" width="48" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="174" y="11" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[/2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="31" width="54" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAL    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="31" width="117" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kontrak Jual Beli Mobil]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="397" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="19" width="125" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Dengan Hormat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="56" width="182" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Yang bertanda tangan dibawah ini :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="88" width="62" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama        :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="128" width="63" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Telp          :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="148" width="63" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="108" width="78" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[No. KTP    :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="88" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="108" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ktp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="128" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="148" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="184" width="536" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Telah menyetujui untuk melakukan pembelian mobil dengan metode cicilan di Showroom Mobil Kelompok 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="204" width="182" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, Dengan rincian sebagai berikut :]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="19" y="248" width="100" height="32" backcolor="#33CCFF"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="119" y="248" width="100" height="32" backcolor="#33CCFF"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="219" y="248" width="53" height="32" backcolor="#33CCFF"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="272" y="248" width="125" height="32" backcolor="#33CCFF"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="248" width="122" height="32" forecolor="#000000" backcolor="#33CCFF"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="19" y="280" width="100" height="41"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="119" y="280" width="100" height="41"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="219" y="280" width="53" height="41"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="272" y="280" width="125" height="41"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="397" y="280" width="122" height="41"/>
+			</rectangle>
+			<textField>
+				<reportElement x="30" y="290" width="89" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{merk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="290" width="93" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="290" width="46" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cicilanbulan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="290" width="86" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{totalharga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="290" width="90" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cicilanprice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="282" y="290" width="17" height="20"/>
+				<textElement/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="290" width="23" height="20"/>
+				<textElement/>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="260" width="53" height="20"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Merk Mobil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="260" width="61" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type Mobil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="248" width="38" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="260" width="39" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cicilan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="260" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="260" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ciclan Per Bulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="338" width="532" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Selanjutnya customer akan melakukan pembayaran Cicilanbulan selanjutnya di tanggal perjanjian ini di buat ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="358" width="62" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sebesar Rp. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="81" y="358" width="87" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cicilanprice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="144" y="358" width="386" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, Pembayaran dilakukan melalui Alfamart atau Indomart.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="377" width="532" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Demikian lah surat perjanjian ini dibuat, sebagai perjanjian terikat anatara kedua belah pihak.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="31"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="92">
+			<staticText>
+				<reportElement x="19" y="0" width="41" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="0" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="72" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="50"/>
+	</summary>
+</jasperReport>

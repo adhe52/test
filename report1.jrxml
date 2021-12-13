@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<parameter name="ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from data where id =$P{ID};]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="ktp" class="java.lang.String"/>
+	<field name="hp" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<field name="merk" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="cicilanbulan" class="java.lang.String"/>
+	<field name="dp" class="java.lang.String"/>
+	<field name="totalharga" class="java.lang.String"/>
+	<field name="cicilanprice" class="java.lang.String"/>
+	<field name="tanggal" class="java.lang.String"/>
+	<field name="tobay" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<image>
+				<reportElement x="34" y="10" width="100" height="93"/>
+				<imageExpression><![CDATA["C:\\Users\\ade herawan\\Desktop\\PBO\\uas_2\\src\\gambar\\Citycons_car_icon-icons.com_67916.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="168" y="10" width="276" height="38"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SHOW ROOM MOBIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="48" width="117" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELOMPOK 3]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="125" width="555" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="168" y="68" width="280" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kramat No. 98, Senen Jakarta Pusat]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="226" y="0" width="117" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[I N V O I C E]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="53" y="23" width="68" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="10"/>
+				</textElement>
+				<text><![CDATA[No : SR/KL/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="23" width="42" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="10"/>
+				</textElement>
+				<text><![CDATA[/2021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="23" width="63" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="10"/>
+				</textElement>
+				<text><![CDATA[NO         :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="63" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="10"/>
+				</textElement>
+				<text><![CDATA[Tanggal  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="55" width="62" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="10"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="55" width="100" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="356" y="23" width="199" height="87"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="364" y="35" width="27" height="20"/>
+				<textElement>
+					<font fontName="Bookman Old Style"/>
+				</textElement>
+				<text><![CDATA[To :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="404" y="35" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="55" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="22" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="221" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Dengan Hormat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="56" width="391" height="20"/>
+				<textElement/>
+				<text><![CDATA[Menindaklanjuti Proses Pembelian Mobil Anda di Showroom Kami, pada Tanggal ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="391" y="56" width="88" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="467" y="56" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[, Maka dengan ini]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="300" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kami Informasikan Invoice Pembelian Anda, Sebagai Berikut :]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement style="table_CH" x="12" y="106" width="41" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement style="table_CH" x="53" y="106" width="166" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement style="table_CH" x="219" y="106" width="100" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement style="table_CH" x="319" y="106" width="100" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement style="table_CH" x="419" y="106" width="116" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="12" y="137" width="41" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="53" y="137" width="166" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="219" y="137" width="100" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="319" y="137" width="100" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="419" y="137" width="116" height="45"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="117" width="32" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="117" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TYPE MOBIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="117" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="117" width="76" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CICILAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="117" width="75" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="63" y="149" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="226" y="149" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="149" width="87" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cicilanprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="149" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tobay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="149" width="21" height="20"/>
+				<textElement/>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="178" height="20"/>
+				<textElement/>
+				<text><![CDATA[Note : Harga Sudah Termasuk Pajak]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="174" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="119" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ketua Kelompok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Hormat Kami,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Showroom Kelompok 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="99" width="100" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Ade Herawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="119" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ketua Kelompok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="14" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Customer,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="419" y="99" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>
